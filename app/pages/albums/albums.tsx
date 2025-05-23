@@ -1,4 +1,7 @@
+import { Table } from "antd";
 import { Navigate, useSearchParams } from "react-router";
+import type { AlbumsType } from "./types";
+import { ALBUMS_COLUMNS, ALBUMS_DUMMY_DATA } from "./constants";
 
 const AlbumsPage: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -10,9 +13,10 @@ const AlbumsPage: React.FC = () => {
   }
 
   return (
-    <div>
-      Page {current}, size {pageSize}
-    </div>
+    <Table<AlbumsType>
+      columns={ALBUMS_COLUMNS}
+      dataSource={ALBUMS_DUMMY_DATA}
+    />
   );
 };
 export default AlbumsPage;

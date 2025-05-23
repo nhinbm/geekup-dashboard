@@ -13,7 +13,7 @@ export default function MainLayout() {
       <Layout>
         <Sidebar />
         <Layout>
-          <Content>
+          <Content className={styles.mainLayout__content}>
             <Outlet />
           </Content>
         </Layout>

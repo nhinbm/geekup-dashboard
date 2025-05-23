@@ -1,3 +1,7 @@
 .mainLayout {
   min-height: 100vh !important;
 }
+
+.mainLayout__content {
+  padding: 24px;
+}
