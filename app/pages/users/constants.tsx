@@ -11,8 +11,12 @@ export const USERS_COLUMNS: TableProps<UsersType>["columns"] = [
   },
   {
     title: "Avatar",
-    dataIndex: "username",
     key: "avatar",
+    render: (value) => {
+      const encodedName = encodeURIComponent(value.name);
+      const avatarUrl = `https://ui-avatars.com/api/?background=random&rounded=true&name=${encodedName}`;
+      return <img alt={value.name} src={avatarUrl} width={30} height={30} />;
+    },
   },
   {
     title: "Name",

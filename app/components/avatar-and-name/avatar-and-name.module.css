@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.name {
+  font-size: 14px;
+}

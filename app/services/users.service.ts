@@ -10,3 +10,8 @@ export const getUsers = async () => {
     total: Number(response.headers["x-total-count"]),
   };
 };
+
+export const getUserById = async (userId: number) => {
+  const response = await axios.get(`${baseURL}/users/${userId}`);
+  return response.data;
+};

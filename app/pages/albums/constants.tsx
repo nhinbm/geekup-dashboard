@@ -1,6 +1,7 @@
 import { Button, type TableProps } from "antd";
 import type { AlbumsType } from "./types";
 import { EyeOutlined } from "@ant-design/icons";
+import AvatarAndName from "~/components/avatar-and-name";
 
 export const ALBUMS_COLUMNS: TableProps<AlbumsType>["columns"] = [
   {
@@ -15,8 +16,8 @@ export const ALBUMS_COLUMNS: TableProps<AlbumsType>["columns"] = [
   },
   {
     title: "User",
-    dataIndex: "userId",
     key: "userId",
+    render: (value) => <AvatarAndName userId={value.userId} />,
   },
   {
     title: "Actions",
