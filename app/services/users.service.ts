@@ -2,14 +2,8 @@ import axios from "axios";
 
 const baseURL = import.meta.env.VITE_API_URL;
 
-export const getAlbums = async (page: number, pageSize: number) => {
-  const start = (page - 1) * pageSize;
-  const response = await axios.get(`${baseURL}/albums`, {
-    params: {
-      _start: start,
-      _limit: pageSize,
-    },
-  });
+export const getUsers = async () => {
+  const response = await axios.get(`${baseURL}/users`);
 
   return {
     data: response.data,
