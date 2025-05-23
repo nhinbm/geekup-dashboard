@@ -1,4 +1,4 @@
-export interface Post {
+export interface Photo {
   albumId: number;
   id: number;
   title: string;
