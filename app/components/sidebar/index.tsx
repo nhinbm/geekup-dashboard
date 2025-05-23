@@ -3,12 +3,17 @@ import { Layout, Menu } from "antd";
 import { useState } from "react";
 import { MENU_ITEMS } from "./constants";
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  style?: React.CSSProperties;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ style }) => {
   const [collapsed, setCollapsed] = useState(false);
   const [collapsedWidth, setCollapsedWidth] = useState(80);
 
   return (
     <Layout.Sider
+      style={style}
       breakpoint="lg"
       collapsible
       collapsed={collapsed}

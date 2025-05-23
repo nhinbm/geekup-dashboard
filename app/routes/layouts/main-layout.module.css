@@ -1,7 +1,23 @@
 .mainLayout {
-  min-height: 100vh !important;
+  height: 100vh !important;
+}
+
+.mainLayout__header {
+  position: "sticky";
+  top: 0;
+  z-index: 1000;
+  background: "#fff";
+}
+
+.mainLayout__sidebar {
+  height: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .mainLayout__content {
-  padding: 24px;
+  flex: 1;
+  display: "flex";
+  flex-direction: "column";
+  overflow: "hidden";
 }
