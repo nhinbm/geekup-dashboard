@@ -44,7 +44,6 @@ const AlbumsPage: React.FC = () => {
       }}
       loading={isLoading}
       onChange={handleTableChange}
-      rowKey="id"
     />
   );
 };
