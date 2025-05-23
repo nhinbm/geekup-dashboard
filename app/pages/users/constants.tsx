@@ -55,6 +55,10 @@ export const USERS_COLUMNS: TableProps<UsersType>["columns"] = [
   {
     title: "Actions",
     key: "actions",
-    render: (_, record) => <Button icon={<EyeOutlined />}>Show</Button>,
+    render: (value) => (
+      <Link to={`${value.id}`}>
+        <Button icon={<EyeOutlined />}>Show</Button>
+      </Link>
+    ),
   },
 ];

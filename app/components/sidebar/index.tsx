@@ -2,6 +2,7 @@ import { Layout, Menu } from "antd";
 
 import { useState } from "react";
 import { MENU_ITEMS } from "./constants";
+import { useLocation } from "react-router";
 
 interface SidebarProps {
   style?: React.CSSProperties;
@@ -10,6 +11,10 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ style }) => {
   const [collapsed, setCollapsed] = useState(false);
   const [collapsedWidth, setCollapsedWidth] = useState(80);
+
+  const location = useLocation();
+
+  const pathSnippets = location.pathname.split("/").filter((i) => i);
 
   return (
     <Layout.Sider
@@ -24,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ style }) => {
       }}
     >
       <Menu
-        defaultSelectedKeys={["albums"]}
+        defaultSelectedKeys={[pathSnippets[0]]}
         mode="inline"
         items={MENU_ITEMS}
         style={{ border: "none" }}
