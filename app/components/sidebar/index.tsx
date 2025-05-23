@@ -23,7 +23,12 @@ const Sidebar: React.FC<SidebarProps> = ({ style }) => {
         setCollapsedWidth(broken ? 0 : 80);
       }}
     >
-      <Menu defaultSelectedKeys={["albums"]} mode="inline" items={MENU_ITEMS} />
+      <Menu
+        defaultSelectedKeys={["albums"]}
+        mode="inline"
+        items={MENU_ITEMS}
+        style={{ border: "none" }}
+      />
     </Layout.Sider>
   );
 };
