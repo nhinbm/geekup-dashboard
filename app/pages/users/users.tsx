@@ -1,9 +1,9 @@
 import { Table } from "antd";
 import ContentLayout from "~/components/content-layout";
-import type { UsersType } from "./types";
 import { USERS_COLUMNS } from "./constants";
 import { useQuery } from "@tanstack/react-query";
 import { getUsers } from "~/services/users.service";
+import type { User } from "~/types/user.type";
 
 const UsersPage: React.FC = () => {
   const { data, isLoading } = useQuery({
@@ -14,7 +14,7 @@ const UsersPage: React.FC = () => {
 
   return (
     <ContentLayout header="Users">
-      <Table<UsersType>
+      <Table<User>
         columns={USERS_COLUMNS}
         dataSource={(data && data.data) || []}
         pagination={false}

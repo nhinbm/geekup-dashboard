@@ -1,9 +1,9 @@
 import { Button, type TableProps } from "antd";
-import type { UsersType } from "./types";
 import { EyeOutlined } from "@ant-design/icons";
 import { Link } from "react-router";
+import type { User } from "~/types/user.type";
 
-export const USERS_COLUMNS: TableProps<UsersType>["columns"] = [
+export const USERS_COLUMNS: TableProps<User>["columns"] = [
   {
     title: "ID",
     dataIndex: "id",

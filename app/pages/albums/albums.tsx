@@ -1,9 +1,9 @@
 import { Table, type TablePaginationConfig } from "antd";
 import { Navigate, useSearchParams } from "react-router";
-import type { AlbumsType } from "./types";
 import { ALBUMS_COLUMNS } from "./constants";
 import { useQuery } from "@tanstack/react-query";
 import { getAlbums } from "~/services/albums.service";
+import type { Albums } from "~/types/album.type";
 
 const AlbumsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -34,7 +34,7 @@ const AlbumsPage: React.FC = () => {
   }
 
   return (
-    <Table<AlbumsType>
+    <Table<Albums>
       columns={ALBUMS_COLUMNS}
       dataSource={(data && data.data) || []}
       pagination={{
