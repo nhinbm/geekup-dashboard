@@ -22,6 +22,6 @@ export const getAlbums = async (
 };
 
 export const getAlbumById = async (userId: number): Promise<Album> => {
-  const response = await axios.get(`${baseURL}/users/${userId}`);
+  const response = await axios.get(`${baseURL}/albums/${userId}`);
   return response.data;
 };

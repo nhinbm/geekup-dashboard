@@ -1,4 +1,6 @@
+import CardDetail from "~/components/card-detail";
+
 const AlbumDetailPage: React.FC = () => {
-  return <>Hello</>;
+  return <CardDetail></CardDetail>;
 };
 export default AlbumDetailPage;
