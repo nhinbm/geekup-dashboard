@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import Header from "~/components/header";
 import styles from "./main-layout.module.css";
 import Sidebar from "~/components/sidebar";
+import BreadcrumbCustom from "~/components/breadcrumb";
 
 const { Content } = Layout;
 
@@ -19,11 +20,11 @@ export default function MainLayout() {
         </div>
 
         <Layout className={styles.mainLayout__content}>
+          <BreadcrumbCustom />
           <Content
             style={{
               flex: 1,
               overflow: "auto",
-              padding: 24,
             }}
           >
             <Outlet />
