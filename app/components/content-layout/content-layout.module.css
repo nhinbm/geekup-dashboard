@@ -1,0 +1,10 @@
+.contentLayout__header {
+  margin: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.contentLayout__content {
+  padding-top: 12px;
+}
