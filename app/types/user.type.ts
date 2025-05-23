@@ -21,3 +21,8 @@ export interface User {
     bs: string;
   };
 }
+
+export type GetAllUsersResponse = {
+  data: User[];
+  total: number;
+};

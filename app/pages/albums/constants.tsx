@@ -2,9 +2,9 @@ import { Button, type TableProps } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import AvatarAndName from "~/components/avatar-and-name";
 import { Link } from "react-router";
-import type { Albums } from "~/types/album.type";
+import type { Album } from "~/types/album.type";
 
-export const ALBUMS_COLUMNS: TableProps<Albums>["columns"] = [
+export const ALBUMS_COLUMNS: TableProps<Album>["columns"] = [
   {
     title: "ID",
     dataIndex: "id",
