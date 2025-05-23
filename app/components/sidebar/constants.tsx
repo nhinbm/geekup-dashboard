@@ -2,7 +2,7 @@ import { IdcardOutlined, ProfileOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Link } from "react-router";
 
-type MenuItem = Required<MenuProps>["items"][number];
+export type MenuItem = Required<MenuProps>["items"][number];
 
 export const MENU_ITEMS: MenuItem[] = [
   {

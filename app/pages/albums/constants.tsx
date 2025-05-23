@@ -2,6 +2,7 @@ import { Button, type TableProps } from "antd";
 import type { AlbumsType } from "./types";
 import { EyeOutlined } from "@ant-design/icons";
 import AvatarAndName from "~/components/avatar-and-name";
+import { Link } from "react-router";
 
 export const ALBUMS_COLUMNS: TableProps<AlbumsType>["columns"] = [
   {
@@ -22,6 +23,10 @@ export const ALBUMS_COLUMNS: TableProps<AlbumsType>["columns"] = [
   {
     title: "Actions",
     key: "actions",
-    render: (_, record) => <Button icon={<EyeOutlined />}>Show</Button>,
+    render: (value) => (
+      <Link to={`${value.id}`}>
+        <Button icon={<EyeOutlined />}>Show</Button>
+      </Link>
+    ),
   },
 ];
