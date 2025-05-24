@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import styles from "./content-layout.module.css";
 import { LeftOutlined } from "@ant-design/icons";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation } from "react-router";
 import { Button } from "antd";
 
 interface ContentLayoutProps {
@@ -10,14 +10,12 @@ interface ContentLayoutProps {
 }
 
 const ContentLayout: React.FC<ContentLayoutProps> = ({ header, children }) => {
-  const navigate = useNavigate();
   const location = useLocation();
 
   const pathSnippets = location.pathname.split("/").filter((i) => i);
-  const from = location.state?.from || "/albums";
 
   const handleBack = () => {
-    navigate(from);
+    window.history.back();
   };
 
   return (

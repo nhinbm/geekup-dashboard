@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ style }) => {
       }}
     >
       <Menu
-        defaultSelectedKeys={[pathSnippets[0]]}
+        selectedKeys={[pathSnippets[0]]}
         mode="inline"
         items={MENU_ITEMS}
         style={{ border: "none" }}
