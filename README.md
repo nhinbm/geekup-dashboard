@@ -1,87 +1,71 @@
-# Welcome to React Router!
+# Geek Up Dashboard
 
-A modern, production-ready template for building full-stack React applications using React Router.
+## Table of Contents
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+* [1. Introduction](#1-introduction)
+* [2. Implementation Planning](#2-implementation-planning)
+* [3. Tech Stack](#3-tech-stack)
+* [4. Environment Variables](#4-environment-variables)
+* [5. Getting Started](#5-getting-started)
 
-## Features
+## 1. Introduction
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+A technical assessment project for Geek Up. This project demonstrates a frontend dashboard implementation using modern web technologies such as React, TypeScript, and more.
 
-## Getting Started
+## 2. Implementation Planning
 
-### Installation
+### Project Structure
 
-Install the dependencies:
+* `components/` – Custom and reusable UI components.
+* `config/` – Application configuration settings.
+* `pages/` – Main page components.
+* `types/` – Centralized TypeScript types (e.g., `User`, `Album`, `Photo`).
+* `service/` – API service layer for external calls.
+
+## 3. Tech Stack
+
+* **React.js** – UI library for building interactive interfaces.
+* **TypeScript** – Static typing for JavaScript.
+* **Ant Design (Antd)** – UI component library.
+* **TanStack Query** – Data fetching and caching (formerly React Query).
+* **React Router v7** – Declarative routing.
+* **Vercel** – Deployment platform for frontend apps.
+
+## 4. Environment Variables
+
+To run this project locally, create a `.env.local` file in the root directory and add the following environment variable:
+
+```env
+VITE_API_URL="https://jsonplaceholder.typicode.com"
+```
+
+## 5. Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+* **Node.js** (v16+ recommended)
+* **npm** (v8+)
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+### Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Access the app at `http://localhost:5173` (or as specified in the terminal).
 
-## Building for Production
-
-Create a production build:
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+The output will be located in the `dist/` folder and can be deployed to any static hosting service.
