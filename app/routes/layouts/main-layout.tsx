@@ -19,16 +19,13 @@ export default function MainLayout() {
           <Sidebar style={{ height: "100%", paddingTop: "8px" }} />
         </div>
 
-        <Layout className={styles.mainLayout__content}>
-          <BreadcrumbCustom />
-          <Content
-            style={{
-              flex: 1,
-              overflow: "auto",
-            }}
-          >
-            <Outlet />
-          </Content>
+        <Layout className={styles.mainLayout__contentContainer}>
+          <div className={styles.mainLayout__contentBody}>
+            <BreadcrumbCustom />
+            <Content>
+              <Outlet />
+            </Content>
+          </div>
         </Layout>
       </Layout>
     </Layout>

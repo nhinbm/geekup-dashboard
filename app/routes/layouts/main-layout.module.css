@@ -15,10 +15,15 @@
   top: 0;
 }
 
-.mainLayout__content {
+.mainLayout__contentContainer {
   flex: 1;
   display: "flex";
   flex-direction: "column";
   overflow: "hidden";
+}
+
+.mainLayout__contentBody {
+  flex: 1;
+  overflow: auto;
   padding: 24px;
 }
