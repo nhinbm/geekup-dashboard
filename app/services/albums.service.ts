@@ -25,3 +25,10 @@ export const getAlbumById = async (userId: number): Promise<Album> => {
   const response = await axios.get(`${baseURL}/albums/${userId}`);
   return response.data;
 };
+
+export const getAlbumsByUserId = async (userId: number): Promise<Album[]> => {
+  const response = await axios.get(`${baseURL}/albums`, {
+    params: { userId },
+  });
+  return response.data;
+};
