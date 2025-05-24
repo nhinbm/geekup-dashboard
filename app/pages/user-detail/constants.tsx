@@ -18,7 +18,7 @@ export const ALBUMS_COLUMNS: TableProps<Album>["columns"] = [
     title: "Actions",
     key: "actions",
     render: (value) => (
-      <Link to={`${value.id}`}>
+      <Link to={`/albums/${value.id}`}>
         <Button icon={<EyeOutlined />}>Show</Button>
       </Link>
     ),

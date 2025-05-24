@@ -14,9 +14,10 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ header, children }) => {
   const location = useLocation();
 
   const pathSnippets = location.pathname.split("/").filter((i) => i);
+  const from = location.state?.from || "/albums";
 
   const handleBack = () => {
-    navigate(-1);
+    navigate(from);
   };
 
   return (
