@@ -12,11 +12,7 @@ const UserDetailPage: React.FC = () => {
   const pathSnippets = location.pathname.split("/").filter((i) => i);
   const id = parseInt(pathSnippets[1]);
 
-  const {
-    data: albumsData,
-    isLoading,
-    isError,
-  } = useQuery({
+  const { data: albumsData, isLoading } = useQuery({
     queryKey: ["albums", id],
     queryFn: () => getAlbumsByUserId(id),
     enabled: !!id,

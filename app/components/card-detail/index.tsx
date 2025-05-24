@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 import ContentLayout from "../content-layout";
-import { Card, Divider } from "antd";
+import { Card, Divider, Spin } from "antd";
 import type { ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getUserById } from "~/services/users.service";
@@ -42,7 +42,7 @@ const CardDetail: React.FC<CardDetailProps> = ({ children }) => {
 
   const title = pathSnippets[0].slice(0, -1);
 
-  if (isAlbumLoading || isUserLoading) return <div>Loading...</div>;
+  if (isAlbumLoading || isUserLoading) return <Spin fullscreen />;
   if (isAlbumError || isUserError) return <div>Error loading data</div>;
   if (!userData) return null;
 

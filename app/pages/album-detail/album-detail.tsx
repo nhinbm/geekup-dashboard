@@ -4,7 +4,7 @@ import CardDetail from "~/components/card-detail";
 import { getAlbumById } from "~/services/albums.service";
 import styles from "./album-data.module.css";
 import { getPhotosByAlbumId } from "~/services/photos.service";
-import { Image, List } from "antd";
+import { Image, List, Spin } from "antd";
 
 const AlbumDetailPage: React.FC = () => {
   const location = useLocation();
@@ -35,7 +35,7 @@ const AlbumDetailPage: React.FC = () => {
     return url;
   };
 
-  if (isAlbumLoading || isPhotosLoading) return <div>Loading...</div>;
+  if (isAlbumLoading || isPhotosLoading) return <Spin fullscreen />;
   if (!albumData || !photos) return <div>Error loading data</div>;
 
   return (
