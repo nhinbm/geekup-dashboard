@@ -1,10 +1,13 @@
 import AlbumDetailPage from "~/pages/album-detail";
 import type { Route } from "./+types/album-detail";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ params }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: `#${params.id} Show Album` },
+    {
+      name: "description",
+      content: `#${params} Show Album`,
+    },
   ];
 }
 
